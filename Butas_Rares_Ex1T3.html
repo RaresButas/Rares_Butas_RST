@@ -1,0 +1,39 @@
+<html>
+<head>
+<h1>Vocale dintr-un sir</h1>
+<script type="text/javascript">
+function GetVowels() {
+var str = document.getElementById('txtname').value;
+var count = 0, total_vowels="";
+for (var i = 0; i < str.length; i++) {
+if (str.charAt(i).match(/[a-zA-Z]/) != null) {
+if (str.charAt(i).match(/[aeiouAEIOU]/))
+{
+total_vowels = total_vowels + str.charAt(i);
+count++;
+}
+}
+}
+document.getElementById('vowels').value = total_vowels;
+document.getElementById('vcount').value = count;
+}
+</script>
+</head>
+<body>
+<div >
+<td>Introdu textul:</td>
+</td>
+<td><input type='text' id='txtname' /></td>
+<p>
+<td><input type='button' value='Calculeaza vocale' onclick="javascript:GetVowels();" /></p>
+<td>Numar de vocale :</td>
+<td><input type='text' readonly="readonly" id='vcount'/></td>
+<tr>
+<p></p>
+<td>Vocalele :</td>
+
+<td><input type='text' readonly="readonly" id='vowels' /></td>
+</tr>
+<tr>
+</body>
+</html>

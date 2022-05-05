@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Vector 1...100</h2>
+
+<p>Apasa butonul pentru a crea vectorul.
+<p><button onclick="NumarPar()">Vector</button><p>
+
+
+<script>
+	function NumarPar(){
+    var vector=[...Array(101).keys()];
+    for(var i=0; i < vector.length; i++) {
+    if (vector[i] % 2=== 0) {
+    document.writeln(vector[i]);
+    }
+    }
+    }
+</script>
+</body>
+</html>

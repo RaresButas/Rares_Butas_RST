@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+   <h1>Introdu 20 de numere:</h1>
+   <br>
+      <label for="Numere">Numere</label> 
+       <input id="numar" type="text">
+     <br> 
+     <br>
+  <input type="button" value="Adauga"onclick="savedata()">
+   <br>
+</form>
+<div id="adauga"></div>
+<script type="text/javascript">
+
+var arrNumere=new Array();
+
+function savedata(){
+
+    var numar = document.getElementById('numar').value;   
+    if (numar >= 20 && numar <= 100) {
+ 	arrNumere[arrNumere.length]=numar;
+   }
+    var content="<b>Numere introduse:</b><br>";
+    content+= [arrNumere]+"</br>";
+    document.getElementById('adauga').innerHTML = content;
+
+}
+</script>
+
+</body>
+</html>

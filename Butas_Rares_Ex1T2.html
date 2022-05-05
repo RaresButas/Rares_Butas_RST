@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>X $ Y = Z ?</h2>
+<h3>Introdu te rog 3 numere<h3>
+<input type="number" id="a" value="">
+<input type="number" id="b" value="">
+<input type="number" id="c" value="">
+
+<p> Apasa pe "Rezolvare" pentru a afisa rezultatul</p>
+<button onclick="rezolvare()">Rezolvare</button>
+
+<p id="rezolvare"></p>
+
+<script>
+function rezolvare() {
+  var x = parseInt(document.getElementById('a').value);
+  var y = parseInt(document.getElementById('b').value);
+  var z = parseInt(document.getElementById('c').value);
+  if (x + y == z) {
+  document.getElementById("rezolvare").innerHTML= + X + "+" + y + "=" + z;
+  } else
+  if (x - y == z) {
+  document.getElementById("rezolvare").innerHTML= + X + "-" + y + "=" + z;
+  } else
+  if (x * y == z) {
+  document.getElementById("rezolvare").innerHTML= + X + "*" + y + "=" + z;
+  } else
+  if (x / y == z) {
+  document.getElementById("rezolvare").innerHTML= + X + "/" + y + "=" + z;
+  } else
+  document.getElementById("rezolvare").innerHTML = "SOLUTIA NU ESTE VALIDA";
+}
+</script>
+</body>
+</html>
+
